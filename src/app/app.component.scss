@@ -1,0 +1,25 @@
+/* General styling for navigation links */
+.nav-links a {
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 500;
+    margin: 0 10px 0 10px;
+    text-decoration: none; /* Ensures no underline */
+}
+
+.nav-links a:hover {
+    color: blue;
+}
+
+/* Make sure the header items are properly aligned */
+.main-header {
+    justify-content: space-between;
+}
+
+/* Specific styling for active links */
+.nav-links a.active, 
+.nav-links a.router-link-active {
+    color: red;
+    background-color: #FFF5E1;
+}
