@@ -1,0 +1,16 @@
+<div class="bg">
+    <div class="child" *ngFor="let ad of ads">
+        <img class="profile" [src]="updateImg(ad.returnedImg)" alt="adImg">
+        <div class="ad-detail">
+            <h2>{{ad.serviceName}}</h2>
+            <hr>
+            <h5>Price: <b>{{ad.price}}</b></h5>
+            <h5>Description: <b>{{ad.description}}</b></h5>
+            <hr>
+            <div>
+                <button nzSize="small" nz-button nzType="primary" routerLink="/company/ad/{{ad.id}}">Update</button>
+                <button (click)="deleteAd(ad.id)" nzSize="small" nz-button nzType="primary" nzDanger style="margin-left: 10px;">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
