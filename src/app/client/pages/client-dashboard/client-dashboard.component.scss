@@ -1,6 +1,7 @@
 .bg{
     background-color: #8080801f;
     padding: 0 3rem 3rem 3rem;
+    min-height: -webkit-fill-available;
 }
 
 .child{
@@ -35,6 +36,6 @@
     margin-bottom: 2rem;
 }
 
-.search-form input, button{
+.search-form input,.search-form button{
     height: 4rem;
 }
