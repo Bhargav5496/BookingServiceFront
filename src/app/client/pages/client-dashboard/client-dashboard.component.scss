@@ -1,0 +1,41 @@
+.bg{
+    background-color: #8080801f;
+    padding: 0 3rem 3rem 3rem;
+    min-height: -webkit-fill-available;
+}
+
+.child{
+    width: 50rem;
+    background-color: white;
+    padding: 3rem;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ad-detail{
+    width: 55%;
+}
+
+.profile{
+    max-width: 250px;
+    max-height: 160px;
+    margin: auto;
+}
+
+.search-form{
+    margin: auto;
+    max-width: 50rem;
+    min-width: 20rem;
+    display: flex;
+    justify-content: center;
+    background-color: #8080801f;
+    margin-bottom: 2rem;
+}
+
+.search-form input,.search-form button{
+    height: 4rem;
+}
