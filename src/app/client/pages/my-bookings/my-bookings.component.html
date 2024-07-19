@@ -1,0 +1,25 @@
+<nz-table #basicTable [nzData]="bookedServices" [nzPageSize]="20" [nzShowPagination]="'false'">
+    <thead>
+        <tr>
+            <th class="heading">Service</th>
+            <th class="heading">Date</th>
+            <th class="heading">Status</th>
+            <th class="heading">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let booking of basicTable.data">
+            <td>{{booking.serviceName}}</td>
+            <td>{{booking.bookingDate | date : "dd/MM/yyyy"}}</td>
+            <td>{{booking.reservationStatus}}</td>
+            <span *ngIf="booking.reviewStatus === 'FALSE'">
+                <td>
+                    <button nzSize="large" nz-button nzType="primary">
+                        Review
+                    </button>
+                </td>
+            </span>
+        </tr>
+    </tbody>
+
+</nz-table>

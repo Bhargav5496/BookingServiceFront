@@ -1,0 +1,27 @@
+<div class="bg" *ngIf="ad">
+    <div class="ad-details-container">
+        <div class="top-section">
+            <div class="profile">
+                <img [src]="avtarUrl" alt="profile">
+            </div>
+            <div class="ad-details">
+                <h2>{{ad.serviceName}}</h2>
+                <h5>Price: <b>{{ad.price}}</b></h5>
+                <h5>Description: <b>{{ad.description}}</b> - Company Name: <b>{{ad.companyName}}</b></h5>
+            </div>
+        </div>
+        <div class="book-service">
+            <h2>Book Service</h2>
+            <form nz-form [formGroup]="validateForm">
+                <nz-form-item>
+                    <nz-form-label>Date of Booking</nz-form-label>
+                    <nz-form-control>
+                        <nz-date-picker formControlName="bookingDate" name="bookingDate">
+                        </nz-date-picker>
+                    </nz-form-control>
+                </nz-form-item>
+                <button nz-button [nzType]="'primary'" [disabled]="validateForm.invalid" (click)="bookService()">Book</button>
+            </form>
+        </div>
+    </div>
+</div>

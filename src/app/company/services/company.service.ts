@@ -59,6 +59,25 @@ export class CompanyService {
     );
   }
 
+  getAllAdBookings(): Observable<any> {
+    const companyId = this.userStorageService.getUserId();
+    return this.http.get(BASE_URL + `api/company/bookings/${companyId}`, {
+      headers: this.createAuthorizationHeader()
+    })
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  changeBookingStatus(bookingId: number, status: string): Observable<any> {
+    return this.http.get(BASE_URL + `api/company/booking/${bookingId}/${status}`, {
+      headers: this.createAuthorizationHeader()
+    })
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
   private createAuthorizationHeader(): HttpHeaders {
     const token = this.userStorageService.getToken();
     if (token) {

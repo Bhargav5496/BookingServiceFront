@@ -22,8 +22,36 @@ export class ClientService {
   }
 
   searchAllAdsByServiceName(name: string): Observable<any> {
-    console.log(name);
     return this.http.get(BASE_URL + `api/client/search/${name}`, {
+      headers: this.createAuthorizationHeader()
+    })
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getAdDetailsByAdId(adId: number): Observable<any> {
+    return this.http.get(BASE_URL + `api/client/ad/${adId}`, {
+      headers: this.createAuthorizationHeader()
+    })
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  bookService(bookDto: any): Observable<any> {
+    const userId = this.userStorageService.getUserId();
+    return this.http.post(BASE_URL + `api/client/book-service`, bookDto, {
+      headers: this.createAuthorizationHeader()
+    })
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  getMyBookings(): Observable<any> {
+    const userId = this.userStorageService.getUserId();
+    return this.http.get(BASE_URL + `api/client/my-bookings/${userId}`, {
       headers: this.createAuthorizationHeader()
     })
     .pipe(

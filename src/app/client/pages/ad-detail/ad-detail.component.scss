@@ -1,0 +1,38 @@
+.bg{
+    background-color: #8080801f;
+    padding: 3rem;
+    min-height: -webkit-fill-available;
+}
+
+.profile img{
+    max-width: 250px;
+    max-height: 160px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.top-section{
+    background-color: white;
+    max-width: 56rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+
+.ad-details-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.book-service{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-left: 2rem;
+    max-width: 24rem;
+    width: 100%;
+
+}
