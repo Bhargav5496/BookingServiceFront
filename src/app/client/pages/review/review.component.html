@@ -1,0 +1,24 @@
+<div class="bg">
+    <div class="parent">
+        <div class="child">
+            <div nz-row class="imgDiv">
+                <div nz-col nzSpan="24">
+                    <h1>Post Review</h1>
+                </div>
+            </div>
+            <form nz-form [formGroup]="validateForm" (ngSubmit)="postReview()">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="This input is required!">
+                        <textarea rows="5" nz-input formControlName="review" placeholder="Write a review"></textarea>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="This input is required!">
+                        <nz-rate formControlName="rating" />
+                    </nz-form-control>
+                </nz-form-item>
+                <button nz-button [nzType]="'primary'">Post</button>
+            </form>
+        </div>
+    </div>
+</div>

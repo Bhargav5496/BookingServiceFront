@@ -14,7 +14,8 @@
             <td>{{booking.reservationStatus}}</td>
             <span *ngIf="booking.reviewStatus === 'FALSE'">
                 <td>
-                    <button nzSize="large" nz-button nzType="primary">
+                    <button nzSize="large" nz-button nzType="primary" nzDanger
+                    routerLink="/client/review/{{booking.id}}" >
                         Review
                     </button>
                 </td>

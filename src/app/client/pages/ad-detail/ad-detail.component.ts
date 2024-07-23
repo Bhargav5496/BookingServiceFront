@@ -16,7 +16,7 @@ export class AdDetailComponent {
   adId: number = this.activatedRoute.snapshot.params['adId'];
   avtarUrl: any;
   ad:any;
-
+  reviews: any;
   validateForm!: FormGroup;
   
   constructor(private clientService: ClientService,
@@ -38,6 +38,7 @@ export class AdDetailComponent {
     this.clientService.getAdDetailsByAdId(this.adId).subscribe(res=>{
       this.avtarUrl = "data:image/jpeg;base64," + res.adDto.returnedImg;
       this.ad = res.adDto;
+      this.reviews = res.reviewDtoList;
     })
   }
 

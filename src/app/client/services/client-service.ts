@@ -49,6 +49,16 @@ export class ClientService {
     );
   }
 
+  postReview(reviewDto: any): Observable<any> {
+    const userId = this.userStorageService.getUserId();
+    return this.http.post(BASE_URL + `api/client/review`, reviewDto, {
+      headers: this.createAuthorizationHeader()
+    })
+    .pipe(
+      catchError(this.handleError)
+    );
+  }
+
   getMyBookings(): Observable<any> {
     const userId = this.userStorageService.getUserId();
     return this.http.get(BASE_URL + `api/client/my-bookings/${userId}`, {
