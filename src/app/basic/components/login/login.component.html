@@ -1,9 +1,9 @@
 <div class="bg">
-    <div class="parent">
+    <div class="form-bg parent">
         <div class="child">
-            <div nz-row class="imgDiv">
+            <div nz-row>
                 <div nz-col nzSpan="24">
-                    <h1>Login</h1>
+                    <h1 class="blue-txt">Login</h1>
                 </div>
             </div>
             <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
@@ -21,7 +21,7 @@
                         </nz-input-group>
                     </nz-form-control>
                 </nz-form-item>
-                <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
+                <button nz-button class="login-form-button login-form-margin blue-btn">Log in</button>
                 Or <a routerLink="/register"> register now !</a>
             </form>
         </div>

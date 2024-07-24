@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="book-service">
-            <h2>Book Service</h2>
+            <h2 class="blue-txt">Book Service</h2>
             <form nz-form [formGroup]="validateForm">
                 <nz-form-item>
                     <nz-form-label>Date of Booking</nz-form-label>
@@ -20,7 +20,7 @@
                         </nz-date-picker>
                     </nz-form-control>
                 </nz-form-item>
-                <button nz-button [nzType]="'primary'" [disabled]="validateForm.invalid" (click)="bookService()">Book</button>
+                <button nz-button class="blue-btn" [disabled]="validateForm.invalid" (click)="bookService()">Book</button>
             </form>
         </div>
     </div>

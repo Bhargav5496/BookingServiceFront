@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --dark-blue-color: #201658;
+    --medium-blue-color: #1D24CA;
+    --light-blue-color: #98ABEE;
+    --light-pink-color: #FBF9F1;
+    --red-color: #D04848;
+    --dark-red-color: #DA1212;
+    --green-color: #0D9276;
+    --dark-green-color: #5A8F7B;
+}
+
+.navbar-bg{
+    background-color: var(--dark-blue-color)
+}
+
+body{
+    background-color: #C9D7DD;
+}
+
+.form-bg, .parent{
+    background-color: var(--light-pink-color);
+}
+
+.form-bg h1{
+    color: var(--dark-blue-color);
+}
+
+.form-bg .ant-input{
+    border-radius: 5px;
+}
+
+.blue-txt{
+    color: var(--dark-blue-color);
+}
+
+.blue-btn{
+    background-color: var(--dark-blue-color);
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.blue-btn:hover{
+    background-color: var(--medium-blue-color);
+    color: white;
+}
+
+.red-btn{
+    background-color: var(--red-color);
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.red-btn:hover{
+    background-color: var(--dark-red-color);
+    color: white;
+}
+
+.green-btn{
+    background-color: var(--green-color);
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.green-btn:hover{
+    background-color: var(--dark-green-color);
+    color: white;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}

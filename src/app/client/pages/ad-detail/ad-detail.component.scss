@@ -20,7 +20,7 @@
 }
 
 
-.ad-details-container {
+.ad-details-container, .review-section {
     display: flex;
     justify-content: space-between;
     max-width: 70rem;
@@ -34,5 +34,19 @@
     margin-left: 2rem;
     max-width: 24rem;
     width: 100%;
+}
 
+.review-section{
+    margin-top: 2rem;
+}
+
+.review-card{
+    width: 100%;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }

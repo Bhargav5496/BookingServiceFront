@@ -7,7 +7,6 @@
 
 .parent{
     width: 30rem;
-    background-color: white;
     padding: 3rem;
     margin: auto;
     border-radius: 5px;
@@ -24,13 +23,5 @@
 .buttons{
     display: flex;
     flex-direction: column;
-}
-
-.buttons button:nth-child(1){
-    margin-bottom: 10px;
-}
-
-button{
-    background-color: black;
-    border-radius: 5px;
+    margin-top: 15px;
 }

@@ -1,7 +1,5 @@
 .bg{
-    background-color: #8080801f;
     padding: 0 3rem 3rem 3rem;
-    min-height: -webkit-fill-available;
 }
 
 .child{
@@ -32,10 +30,10 @@
     min-width: 20rem;
     display: flex;
     justify-content: center;
-    background-color: #8080801f;
     margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 
 .search-form input,.search-form button{
-    height: 4rem;
+    height: 3rem;
 }
